@@ -18,7 +18,7 @@ def generate_qr_code_with_logo(url, logo_path, output_path):
     qr.make(fit=True)
 
     # Create an image from the QR code instance
-    qr_img = qr.make_image(fill='black', back_color='white')
+    qr_img = qr.make_image(fill='black', back_color='white').convert('RGB')
 
     # Load the logo image
     logo = Image.open(logo_path)
