@@ -13,7 +13,9 @@ Grab a stock price - Script to show price of any stock. This challenge explains 
 Automation script to download a report! 
 https://github.com/sumanthkrishna/experimental_scripts/blob/main/automate-report-download-script-java.java
 
+# Contract testing steps
 
+# Git Cleanup bash/python scripts
 
 # QR Code Generator 5/29/2024
 ### Explanation
