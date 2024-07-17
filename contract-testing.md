@@ -115,8 +115,7 @@ public class ItemController {
 Generate OpenAPI Documentation: Use tools like SpringDoc OpenAPI to automatically generate the OpenAPI documentation from your annotated code.
 Add the SpringDoc OpenAPI dependency to your pom.xml:
 
-xml
-Copy code
+
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-ui</artifactId>
@@ -146,5 +145,7 @@ pip install -q json2yaml
 json2yaml openapi.json > openapi.yaml
 
 echo "OpenAPI contract has been generated and saved as openapi.yaml"
-Conclusion
+
+
+# Conclusion
 By following these steps, you can generate a detailed and accurate OpenAPI contract for your Java REST API. This contract can be shared with customers to ensure smooth contract testing, ensuring both parties (consumer and producer) are in agreement on how the API should behave.
