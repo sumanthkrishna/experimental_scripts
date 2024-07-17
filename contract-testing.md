@@ -6,7 +6,7 @@ Step 1: Define Your API Using OpenAPI Specification
 First, you need to write an OpenAPI specification document. This document describes the API endpoints, request and response formats, parameters, etc.
 
 Here’s an example of an OpenAPI specification in a YAML file (api-spec.yaml):
-
+```
 openapi: 3.0.0
 info:
   title: Example API
@@ -64,9 +64,10 @@ components:
           type: string
         description:
           type: string
+```          
 Step 2: Integrate OpenAPI Specification with Your Java Application
 Add Swagger Annotations: Annotate your REST API with Swagger annotations.
-
+```
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -112,15 +113,17 @@ public class ItemController {
         // Implementation
     }
 }
+```
 Generate OpenAPI Documentation: Use tools like SpringDoc OpenAPI to automatically generate the OpenAPI documentation from your annotated code.
 Add the SpringDoc OpenAPI dependency to your pom.xml:
 
-
+```
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-ui</artifactId>
     <version>1.5.10</version>
 </dependency>
+```
 Step 3: Generate and Share the Contract
 After configuring the application, you can start your Spring Boot application and access the OpenAPI documentation at http://localhost:8080/swagger-ui.html. You can export this documentation as a JSON or YAML file which can then be shared with your customers for contract testing.
 
@@ -128,10 +131,10 @@ After configuring the application, you can start your Spring Boot application an
 
 
 Example Script to Generate OpenAPI Contract
-
+```
 #!/bin/bash
 
-# Start Spring Boot application
+#Start Spring Boot application
 mvn spring-boot:run &
 
 # Wait for the application to start
@@ -145,7 +148,7 @@ pip install -q json2yaml
 json2yaml openapi.json > openapi.yaml
 
 echo "OpenAPI contract has been generated and saved as openapi.yaml"
-
+```
 
 # Conclusion
 By following these steps, you can generate a detailed and accurate OpenAPI contract for your Java REST API. This contract can be shared with customers to ensure smooth contract testing, ensuring both parties (consumer and producer) are in agreement on how the API should behave.
